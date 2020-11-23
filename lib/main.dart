@@ -1,4 +1,5 @@
 import 'package:firebase_ml_text_recognition/detections/face_detections.dart';
+import 'package:firebase_ml_text_recognition/labeller/labeller.dart';
 import 'package:firebase_ml_text_recognition/scanners/bar_code_scanner.dart';
 import 'package:firebase_ml_text_recognition/widget/text_recognition_widget.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,8 @@ class PageViewClass extends StatelessWidget {
       children: [
         MainPage(title: "Text"),
         Scanner(),
-        FaceDetection()
+        FaceDetection(),
+        //ImageLabeller()
       ],
     );
   }
