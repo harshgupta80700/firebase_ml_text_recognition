@@ -1,3 +1,5 @@
+import 'package:firebase_ml_text_recognition/detections/face_detections.dart';
+import 'package:firebase_ml_text_recognition/scanners/bar_code_scanner.dart';
 import 'package:firebase_ml_text_recognition/widget/text_recognition_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -11,9 +13,23 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: title,
         theme: ThemeData(primarySwatch: Colors.deepOrange),
-        home: MainPage(title: title),
+        home:PageViewClass()
       );
 }
+
+class PageViewClass extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return PageView(
+      children: [
+        MainPage(title: "Text"),
+        Scanner(),
+        FaceDetection()
+      ],
+    );
+  }
+}
+
 
 class MainPage extends StatefulWidget {
   final String title;
