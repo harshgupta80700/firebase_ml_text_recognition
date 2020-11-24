@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 
-class Scanner extends StatefulWidget {
+class QRCodeScanner extends StatefulWidget {
   @override
-  _ScannerState createState() => _ScannerState();
+  _QRCodeScannerState createState() => _QRCodeScannerState();
 }
 
-class _ScannerState extends State<Scanner> {
+class _QRCodeScannerState extends State<QRCodeScanner> {
   File pickedImage;
   var text = '';
 
@@ -50,7 +50,7 @@ class _ScannerState extends State<Scanner> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("BarCode Scanner"),
+        title: Text("QR Code Scanner"),
         centerTitle: true,
       ),
       body: Column(

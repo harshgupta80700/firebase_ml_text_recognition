@@ -56,6 +56,10 @@ class _FaceDetectionState extends State<FaceDetection> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Face Detection"),
+        centerTitle: true,
+      ),
       body: Column(
         children: <Widget>[
           SizedBox(height: 50.0),

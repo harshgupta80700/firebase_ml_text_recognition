@@ -1,6 +1,6 @@
 import 'package:firebase_ml_text_recognition/detections/face_detections.dart';
-import 'package:firebase_ml_text_recognition/labeller/labeller.dart';
 import 'package:firebase_ml_text_recognition/scanners/bar_code_scanner.dart';
+import 'package:firebase_ml_text_recognition/scanners/qr_code_scanner.dart';
 import 'package:firebase_ml_text_recognition/widget/text_recognition_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -23,8 +23,9 @@ class PageViewClass extends StatelessWidget {
   Widget build(BuildContext context) {
     return PageView(
       children: [
-        MainPage(title: "Text"),
+        MainPage(title: "Text Recognition"),
         Scanner(),
+        QRCodeScanner(),
         FaceDetection(),
         //ImageLabeller()
       ],
@@ -49,6 +50,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
+          centerTitle: true,
         ),
         body: Padding(
           padding: const EdgeInsets.all(8),
