@@ -15,7 +15,7 @@ class TextAreaWidget extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              height: 100,
+              height: MediaQuery.of(context).size.height / 4.5,
               decoration: BoxDecoration(border: Border.all()),
               padding: EdgeInsets.all(8),
               alignment: Alignment.center,

@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:clipboard/clipboard.dart';
 import 'package:firebase_ml_text_recognition/api/firebase_ml_api.dart';
 import 'package:firebase_ml_text_recognition/widget/text_area_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -56,7 +57,9 @@ class _TextRecognitionWidgetState extends State<TextRecognitionWidget> {
     showDialog(
       context: context,
       child: Center(
-        child: CircularProgressIndicator(),
+        child: CupertinoActivityIndicator(
+          radius: 20,
+        ),
       ),
     );
 
